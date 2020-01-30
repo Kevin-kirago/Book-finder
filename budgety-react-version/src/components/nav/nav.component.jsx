@@ -1,12 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../nav/nav.styles.scss";
 
 const Navigation = () => {
 	return (
-		<div className="nav">
+		<nav className="nav">
 			<div className="nav__header">
-				<Link to="/" className="logo__text">
+				<Link to="/" className="nav__header--logo">
 					Budgety
 				</Link>
 			</div>
@@ -27,7 +27,7 @@ const Navigation = () => {
 					</Link>
 				</li>
 			</ul>
-		</div>
+		</nav>
 	);
 };
 

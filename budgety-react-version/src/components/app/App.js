@@ -3,17 +3,20 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 
 // pages
-import HomePage from "../pages/home/home.component";
-import LoginPage from "../pages/login/login.component";
-import RegisterPage from "../pages/register/register.component";
+import HomePage from "../../pages/home/home.component";
+import LoginPage from "../../pages/login/login.component";
+import RegisterPage from "../../pages/register/register.component";
 
 // components
-import Navigation from "../components/nav/nav.component";
+import Navigation from "../nav/nav.component";
+import Footer from "../footer/footer.component";
 
 class App extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {};
+		this.state = {
+			currentUser: null
+		};
 	}
 
 	componentDidMount() {
@@ -30,6 +33,7 @@ class App extends React.Component {
 						<Route exact path="/login" component={LoginPage} />
 						<Route exact path="/register" component={RegisterPage} />
 					</Switch>
+					<Footer />
 				</Router>
 			</div>
 		);

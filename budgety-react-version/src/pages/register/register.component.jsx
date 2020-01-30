@@ -1,10 +1,12 @@
 import React from "react";
+import Header from "../../components/header/header.component";
 import "../register/register.styles.scss";
 
 const RegisterPage = () => {
 	return (
 		<div className="register">
-			<h1>Register</h1>
+			<Header />
+			<main className="section-main"></main>
 		</div>
 	);
 };

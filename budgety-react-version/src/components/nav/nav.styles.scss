@@ -1,9 +1,57 @@
 .nav {
+	position: absolute;
+	top: 0;
+	left: 0;
 	height: 10rem;
 	width: 100%;
-	border: 1px solid #e712;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 
 	display: flex;
 	justify-content: space-between;
 	padding: 0rem 8rem;
+	z-index: 1;
+
+	&__header {
+		display: grid;
+		align-content: center;
+
+		&--logo {
+			&:link,
+			&:visited {
+				font-size: 4rem;
+				font-weight: 700;
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__list {
+		list-style: none;
+		display: flex;
+		align-items: center;
+	}
+
+	&__item {
+		font-size: 1.4rem;
+
+		&:not(:last-child) {
+			margin-right: 2rem;
+		}
+	}
+
+	&__link {
+		&:link,
+		&:visited {
+			color: #fff;
+			text-decoration: none;
+			transition: all 0.3s ease-in;
+			border-bottom: 1px solid rgba(255, 255, 255, 0);
+		}
+
+		&:hover,
+		&:active {
+			border-color: #fff;
+		}
+	}
 }
