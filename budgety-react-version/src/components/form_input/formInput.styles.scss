@@ -1,0 +1,26 @@
+.form {
+	&__group {
+		position: relative;
+		display: grid;
+		grid-row-gap: 0.7rem;
+		// padding: 1rem 0;
+		margin: 1.5rem 0;
+	}
+
+	&__input {
+		display: block;
+		background-color: #ececec;
+		padding: 1.3rem 2rem;
+		border-radius: 0.5rem;
+		border: 1px solid #fff;
+
+		&:focus {
+			outline: none;
+		}
+
+		&--label {
+			color: #8898aa;
+			font-size: 1.5rem;
+		}
+	}
+}
