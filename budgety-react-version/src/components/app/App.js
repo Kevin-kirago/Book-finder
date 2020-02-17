@@ -2,6 +2,8 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import "./App.scss";
 
+import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
+
 // pages
 import HomePage from "../../pages/home/home.component";
 import LoginPage from "../../pages/login/login.component";
@@ -19,14 +21,36 @@ class App extends React.Component {
 		};
 	}
 
+	unsubscribeFromAuth = null;
+
 	componentDidMount() {
-		console.log(this.state);
+		this.unsubscribeFromAuth = auth.onAuthStateChanged(async user => {
+			if (user) {
+				const userRef = await createUserProfileDocument(user);
+
+				userRef.onSnapshot(snapshot => {
+					this.setState({
+						id: snapshot.id,
+						...snapshot.data()
+					});
+				});
+			}
+
+			console.log(user);
+			this.setState({ currentUser: user });
+		});
+	}
+
+	componentWillUnmount() {
+		this.unsubscribeFromAuth();
 	}
 
 	render() {
+		const { currentUser } = this.state;
+
 		return (
 			<div className="App">
-				<Navigation />
+				<Navigation currentUser={currentUser} />
 				<Switch>
 					<Route exact path="/" component={HomePage} />
 					<Route exact path="/login" component={LoginPage} />

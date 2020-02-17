@@ -4,7 +4,6 @@
 	left: 0;
 	height: 10rem;
 	width: 100%;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 
 	display: flex;
 	justify-content: space-between;
@@ -34,6 +33,7 @@
 
 	&__item {
 		font-size: 1.4rem;
+		cursor: pointer;
 
 		&:not(:last-child) {
 			margin-right: 2rem;
@@ -53,5 +53,18 @@
 		&:active {
 			border-color: #fff;
 		}
+	}
+}
+
+.log-out-btn {
+	cursor: pointer;
+	font-size: 1.4rem;
+	color: #fff;
+	transition: all 0.3s ease-in;
+	border-bottom: 1px solid rgba(255, 255, 255, 0);
+
+	&:hover,
+	&:active {
+		border-color: #fff;
 	}
 }

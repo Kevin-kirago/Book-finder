@@ -1,0 +1,21 @@
+.form__link {
+	&--item {
+		background-color: #ececec;
+		padding: 1rem 2rem;
+		display: flex;
+		align-items: center;
+		border-radius: 5px;
+		border: none;
+		cursor: pointer;
+
+		span {
+			color: #3282b8;
+			font-size: 1.5rem;
+		}
+	}
+
+	&--icon {
+		width: 2rem;
+		margin-right: 1rem;
+	}
+}
