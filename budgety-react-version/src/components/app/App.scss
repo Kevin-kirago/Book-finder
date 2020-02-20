@@ -2,39 +2,13 @@
 	width: 100%;
 }
 
-.header {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://images.unsplash.com/photo-1558625628-8b7292e0c335?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
-	background-repeat: no-repeat;
-	background-size: cover;
-	padding: 20rem 0;
-
-	&__container {
-		width: 30vw;
-		margin: 0 auto;
-	}
-
-	&__paragraph {
-		color: rgba(255, 255, 255, 0.7);
-		text-align: center;
-		font-size: 1.6rem;
-		font-weight: 300;
-		letter-spacing: 0.5px;
-	}
-
-	&__text {
-		font-size: 3rem;
-		font-weight: 400;
-		color: #fff;
-		text-align: center;
-	}
-}
-
 .section-main {
 	display: grid;
 	justify-items: center;
 	position: relative;
 	width: 100%;
 	background: #ececec;
+	padding: 5rem 0;
 }
 
 .form {
@@ -64,7 +38,6 @@
 		width: 50rem;
 		border: none;
 		border-radius: 5px;
-		transform: translateY(-10vh);
 	}
 
 	&__btn {

@@ -55,35 +55,27 @@ class RegisterPage extends React.Component {
 		const { name, email, password, confirm_password } = this.state;
 
 		return (
-			<div>
-				<header className="header">
-					<div className="header__container">
-						<h1 className="header__text">Welcome!</h1>
-						<p className="header__paragraph">Log in into your account to do more budgets, or create new account for projects.</p>
-					</div>
-				</header>
-				<main className="section-main">
-					<div className="form__container">
-						<div className="form__header">
-							<h2 className="form__header--heading">Sign Up With</h2>
-							<div className="form__link">
-								<SignWithButton logo={gitLogo} title="Github" />
-								<SignWithButton eventHandler={signInWithGoogle} logo={googleLogo} title="Google" />
-							</div>
+			<main className="section-main">
+				<div className="form__container">
+					<div className="form__header">
+						<h2 className="form__header--heading">Sign Up With</h2>
+						<div className="form__link">
+							<SignWithButton logo={gitLogo} title="Github" />
+							<SignWithButton eventHandler={signInWithGoogle} logo={googleLogo} title="Google" />
 						</div>
-						<form className="form" onSubmit={this.handleSubmit}>
-							<h2 className="form__header--heading">Or sign up with your credentials</h2>
-							<FormInput name="name" value={name} type="text" handleChange={this.handleChange} label="Name" placeholder="Name" required />
-							<FormInput name="email" value={email} type="email" handleChange={this.handleChange} label="Email" placeholder="example@mail.com" required />
-							<FormInput name="password" value={password} type="password" handleChange={this.handleChange} label="Password" placeholder="Password" required />
-							<FormInput name="confirm_password" value={confirm_password} type="password" handleChange={this.handleChange} label="Confirm Password" placeholder="Confirm Password" required />
-							<button type="submit" className="form__btn">
-								Create Account
-							</button>
-						</form>
 					</div>
-				</main>
-			</div>
+					<form className="form" onSubmit={this.handleSubmit}>
+						<h2 className="form__header--heading">Or sign up with your credentials</h2>
+						<FormInput name="name" value={name} type="text" handleChange={this.handleChange} label="Name" placeholder="Name" required />
+						<FormInput name="email" value={email} type="email" handleChange={this.handleChange} label="Email" placeholder="example@mail.com" required />
+						<FormInput name="password" value={password} type="password" handleChange={this.handleChange} label="Password" placeholder="Password" required />
+						<FormInput name="confirm_password" value={confirm_password} type="password" handleChange={this.handleChange} label="Confirm Password" placeholder="Confirm Password" required />
+						<button type="submit" className="form__btn">
+							Create Account
+						</button>
+					</form>
+				</div>
+			</main>
 		);
 	}
 }

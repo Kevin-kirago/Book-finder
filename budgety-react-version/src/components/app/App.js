@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import "./App.scss";
 
 import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
@@ -53,8 +53,8 @@ class App extends React.Component {
 				<Navigation currentUser={currentUser} />
 				<Switch>
 					<Route exact path="/" component={HomePage} />
-					<Route exact path="/login" component={LoginPage} />
-					<Route exact path="/register" component={RegisterPage} />
+					<Route exact path="/login" render={() => (currentUser ? <Redirect to="/" /> : <LoginPage />)} />
+					<Route exact path="/register" render={() => (currentUser ? <Redirect to="/" /> : <RegisterPage />)} />
 				</Switch>
 				<Footer />
 			</div>

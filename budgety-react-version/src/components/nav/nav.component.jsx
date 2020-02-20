@@ -9,18 +9,13 @@ const Navigation = ({ currentUser }) => {
 		<nav className="nav">
 			<div className="nav__header">
 				<Link to="/" className="nav__header--logo">
-					MyReads
+					BOOK FINDER
 				</Link>
 			</div>
 			<ul className="nav__list">
 				<li className="nav__item">
 					<Link rel="stylesheet" to="/" className="nav__link">
 						Home
-					</Link>
-				</li>
-				<li className="nav__item">
-					<Link rel="stylesheet" to="/" className="nav__link">
-						Dashboard
 					</Link>
 				</li>
 				{currentUser ? (
