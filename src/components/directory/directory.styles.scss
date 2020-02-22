@@ -1,0 +1,14 @@
+.directory {
+	position: relative;
+	padding: 10rem;
+	width: 100%;
+
+	display: grid;
+	align-content: center;
+	justify-items: center;
+}
+
+.no-results {
+	font-size: 3rem;
+	color: #7e7e7e;
+}
