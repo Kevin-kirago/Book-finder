@@ -2,19 +2,30 @@
 	position: relative;
 	height: 30rem;
 	width: 100%;
+	background-color: #ececec;
 
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: 15rem 1fr;
 
 	.container-1 {
 		position: relative;
 		width: 100%;
+		height: inherit;
 		display: grid;
-		align-content: center;
 		justify-items: center;
 
 		.img-cover {
-			width: 100%;
+			display: block;
+			object-fit: contain;
+		}
+	}
+
+	.container-2 {
+		padding: 1rem 2rem;
+
+		.title {
+			font-size: 2.5rem;
+			color: #222;
 		}
 	}
 }

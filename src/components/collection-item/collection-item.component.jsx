@@ -7,7 +7,7 @@ const CollectionItem = ({ item }) => {
 	const {
 		selfLink,
 		volumeInfo: {
-			imageLinks: { thumbnail },
+			imageLinks: { smallThumbnail },
 			title
 		}
 	} = item;
@@ -17,7 +17,12 @@ const CollectionItem = ({ item }) => {
 	return (
 		<div className="collection-item">
 			<div className="container-1">
-				<img src={thumbnail} alt="" className="img-cover" />
+				<img src={smallThumbnail} alt="" className="img-cover" />
+			</div>
+			<div className="container-2">
+				<div className="title">
+					<b>Title</b>: {title}
+				</div>
 			</div>
 		</div>
 	);
